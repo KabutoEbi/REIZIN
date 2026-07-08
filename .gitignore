@@ -1,0 +1,50 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild*/
+[Bb]uilds/
+MemoryCaptures/
+Logs/
+Recordings/
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.user
+*.csproj
+*.unityproj
+*.sln
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# User specified folders
+Assets/000MaterialsToExclude/
+Assets/TextMesh Pro/
+Assets/Allsky/
+
+# Large raw source files (not needed for runtime)
+*.psd
+*.tiff
+*.tif
+*.wav
+*.mp4
+*.mov
+*.avi
+*.vrm
+*.blend
+*.fbx
+*.zip
+*.rar
+*.7z
+*.exr
+*.pdf
+*.unitypackage
+
+# Temp / backup
+*.bak
+*.tmp
+*.swp
+
