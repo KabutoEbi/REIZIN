@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float mouseSensitivity = 2f;
-    [SerializeField] private float cameraHeight = 1.3f;
+    [SerializeField] private float cameraHeight = 1.0f;
     [SerializeField] private float minPitch = -80f;
     [SerializeField] private float maxPitch = 80f;
 
