@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 150}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 1
-  controlID: 12861
+  controlID: 32861
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 150}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 0
-  controlID: 12862
+  controlID: 32862
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 150}
   m_MaxSize: {x: 8096, y: 24288}
   vertical: 1
-  controlID: 12749
+  controlID: 32734
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -562,9 +562,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.6187973, y: -3.748541, z: 12.15185}
+    m_Target: {x: 1.8018568, y: 2.9884472, z: 0.76522505}
     speed: 2
-    m_Value: {x: 2.6187973, y: -3.748541, z: 12.15185}
+    m_Value: {x: 1.8018568, y: 2.9884472, z: 0.76522505}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,13 +610,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2675576, y: -0.14131162, z: 0.039703798, w: 0.9523009}
+    m_Target: {x: 0.1572669, y: 0.64541966, z: -0.13816743, w: 0.73459166}
     speed: 2
-    m_Value: {x: 0.26755634, y: -0.14131096, z: 0.03970361, w: 0.9522965}
+    m_Value: {x: 0.15726575, y: 0.64541495, z: -0.13816643, w: 0.7345863}
   m_Size:
-    m_Target: 17.583796
+    m_Target: 19.470783
     speed: 2
-    m_Value: 17.583796
+    m_Value: 19.470783
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -862,7 +862,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2efbffff
+      m_ExpandedIDs: 1a31feffb818ffff2efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -957,7 +957,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/3DModels/TofuMarket
+    - Assets/Textures
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -965,15 +965,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/3DModels/TofuMarket
+  - Assets/Textures
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\itsuk\Documents\Unity\REIZIN
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 36620000
-    m_LastClickedID: 25142
+    m_SelectedIDs: 42620000
+    m_LastClickedID: 25154
     m_ExpandedIDs: 00000000e0610000e4610000e6610000e8610000ea610000ec610000f0610000f26100008479000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1002,7 +1002,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e0610000e4610000e6610000e8610000ea610000ec610000ee610000f0610000f26100008479000000ca9a3b
+    m_ExpandedIDs: 00000000e0610000e4610000e6610000e8610000ea610000ec610000f0610000f26100008479000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1027,9 +1027,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: e65d0000
-    m_LastClickedInstanceID: 24038
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000c060000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1125,7 +1125,7 @@ MonoBehaviour:
     m_CachedPref: 151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 24038
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
