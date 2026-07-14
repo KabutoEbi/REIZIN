@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 150}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 1
-  controlID: 43342
+  controlID: 48454
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 150}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 0
-  controlID: 43343
+  controlID: 48455
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 150}
   m_MaxSize: {x: 8096, y: 24288}
   vertical: 1
-  controlID: 43218
+  controlID: 48330
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -562,9 +562,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.522716, y: -19.188805, z: 43.932858}
+    m_Target: {x: 7.010883, y: -28.533375, z: 32.50916}
     speed: 2
-    m_Value: {x: -1.522716, y: -19.188805, z: 43.932858}
+    m_Value: {x: 7.010883, y: -28.533375, z: 32.50916}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -614,9 +614,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.38758898, y: -0.08688125, z: 0.036718268, w: -0.9169941}
   m_Size:
-    m_Target: 16.322779
+    m_Target: 26.945984
     speed: 2
-    m_Value: 16.322779
+    m_Value: 26.945984
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -862,7 +862,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 4ad3fdff1a31feffb818ffff9632ffff2437ffff743affff2a3fffff8040ffff2efbffff
+      m_ExpandedIDs: 4ad3fdff1a31feffc433feffb818ffff9632ffff2437ffff743affff2a3fffff8040ffff2efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -957,7 +957,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Textures
+    - Assets/Materials
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -965,15 +965,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Textures
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\itsuk\Documents\Unity\REIZIN
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 42620000
-    m_LastClickedID: 25154
+    m_SelectedIDs: 54620000
+    m_LastClickedID: 25172
     m_ExpandedIDs: 00000000e0610000e4610000e6610000e8610000ea610000ec610000f0610000f26100008479000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1027,8 +1027,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 5ab7ffff
-    m_LastClickedInstanceID: -18598
+    m_SelectedInstanceIDs: ac5d0000
+    m_LastClickedInstanceID: 23980
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000c060000000000000
     m_RenameOverlay:
@@ -1125,7 +1125,7 @@ MonoBehaviour:
     m_CachedPref: 151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -18598
+  m_LastInspectedObjectInstanceID: 23980
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
