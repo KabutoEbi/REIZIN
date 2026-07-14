@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 150}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 1
-  controlID: 32861
+  controlID: 34163
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 150}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 0
-  controlID: 32862
+  controlID: 34164
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 150}
   m_MaxSize: {x: 8096, y: 24288}
   vertical: 1
-  controlID: 32734
+  controlID: 34049
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -562,9 +562,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.8018568, y: 2.9884472, z: 0.76522505}
+    m_Target: {x: -11.316822, y: -12.583719, z: -10.060004}
     speed: 2
-    m_Value: {x: 1.8018568, y: 2.9884472, z: 0.76522505}
+    m_Value: {x: -11.316822, y: -12.583719, z: -10.060004}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -610,13 +610,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.1572669, y: 0.64541966, z: -0.13816743, w: 0.73459166}
+    m_Target: {x: 0.07233737, y: -0.9258837, z: 0.29036966, w: 0.23067303}
     speed: 2
-    m_Value: {x: 0.15726575, y: 0.64541495, z: -0.13816643, w: 0.7345863}
+    m_Value: {x: 0.07233672, y: -0.9258754, z: 0.29036707, w: 0.23067097}
   m_Size:
-    m_Target: 19.470783
+    m_Target: 17.629784
     speed: 2
-    m_Value: 19.470783
+    m_Value: 17.629784
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -862,7 +862,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1a31feffb818ffff2efbffff
+      m_ExpandedIDs: 6225feffb818ffff2a3fffff2efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1077,8 +1077,8 @@ MonoBehaviour:
     y: 0
     width: 309
     height: 939
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
