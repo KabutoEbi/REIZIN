@@ -3205,6 +3205,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1185067951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 077f816e6a23d554581ddee7146c9259, type: 3}
+  m_PrefabInstance: {fileID: 468024838}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1248975940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4078,6 +4083,12 @@ MonoBehaviour:
   tutorial2Text: {fileID: 1279652169}
   TVTurnOnText: {fileID: 1045605489}
   stageHideDelay: 2
+  RemotoController: {fileID: 1185067951}
+  plaercamera: {fileID: 963194227}
+  interactionDistance: 3
+  interactionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1001 &1729404822
 PrefabInstance:
   m_ObjectHideFlags: 0

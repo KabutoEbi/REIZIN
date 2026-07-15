@@ -14,6 +14,10 @@ public class TextController : MonoBehaviour {
 	[SerializeField] private TMP_Text tutorial2Text;
 	[SerializeField] private GameObject TVTurnOnText;
 	[SerializeField] private float stageHideDelay = 2f;
+	[SerializeField] private GameObject RemotoController;
+	[SerializeField] private Camera plaercamera;
+	[SerializeField] private float interactionDistance = 3f;
+	[SerializeField] private LayerMask interactionLayerMask = ~0;
 
 	private TMP_Text[] tutorialStages;
 	private StageRequirement[] stageRequirements;
@@ -23,7 +27,7 @@ public class TextController : MonoBehaviour {
 	private bool pressedS;
 	private bool pressedD;
 	private bool pressedLeftClick;
-	private bool pressedTVTurnOn;
+	private bool IsTVTurnOn;
 	private bool transitionScheduled;
 	private string originalText;
 
@@ -36,6 +40,10 @@ public class TextController : MonoBehaviour {
 	private void Start() {
 		if (tutorialText == null) {
 			return;
+		}
+
+		if (plaercamera == null) {
+			plaercamera = Camera.main;
 		}
 
 		tutorialStages = new TMP_Text[3];
@@ -63,6 +71,9 @@ public class TextController : MonoBehaviour {
 
 		if (tutorialStages[2] != null) {
 			tutorialStages[2].gameObject.SetActive(false);
+		}
+
+		if (TVTurnOnText != null) {
 			TVTurnOnText.SetActive(false);
 		}
 
@@ -111,15 +122,40 @@ public class TextController : MonoBehaviour {
 				pressedLeftClick = true;
 				changed = true;
 			}
-			// else if (stageRequirements[currentStageIndex] == StageRequirement.TVTurnOn && !pressedTVTurnOn && Input.GetKeyDown(KeyCode.F)) {
-			// 	pressedTVTurnOn = true;
-			// 	changed = true;
-			// }
+			else if (stageRequirements[currentStageIndex] == StageRequirement.TVTurnOn) {
+				bool lookingAtRemoto = IsLookingAtRemotoController();
+
+				if (TVTurnOnText != null && TVTurnOnText.activeSelf != lookingAtRemoto) {
+					TVTurnOnText.SetActive(lookingAtRemoto);
+				}
+
+				if (lookingAtRemoto && Input.GetKeyDown(KeyCode.E)) {
+					TVTurnOn();
+				}
+			}
 		}
 
 		if (changed) {
 			RefreshText();
 		}
+	}
+
+	private bool IsLookingAtRemotoController() {
+		if (RemotoController == null) {
+			return false;
+		}
+
+		Camera cam = plaercamera != null ? plaercamera : Camera.main;
+		if (cam == null) {
+			return false;
+		}
+
+		Ray ray = new Ray(cam.transform.position, cam.transform.forward);
+		if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, interactionLayerMask)) {
+			return hit.transform == RemotoController.transform || hit.transform.IsChildOf(RemotoController.transform);
+		}
+
+		return false;
 	}
 
 	private TMP_Text CreateStageClone(string stageName) {
@@ -147,6 +183,10 @@ public class TextController : MonoBehaviour {
 		ResetKeyState();
 		HideOtherStages(stageIndex);
 		tutorialText = tutorialStages[currentStageIndex];
+
+		if (TVTurnOnText != null) {
+			TVTurnOnText.SetActive(false);
+		}
 
 		if (tutorialText == null) {
 			return;
@@ -214,7 +254,7 @@ public class TextController : MonoBehaviour {
 		}
 
 		if (stageRequirements[currentStageIndex] == StageRequirement.TVTurnOn) {
-			return pressedTVTurnOn;
+			return IsTVTurnOn;
 		}
 
 		return pressedW && pressedA && pressedS && pressedD;
@@ -244,7 +284,7 @@ public class TextController : MonoBehaviour {
 		pressedS = false;
 		pressedD = false;
 		pressedLeftClick = false;
-		pressedTVTurnOn = false;
+		IsTVTurnOn = false;
 	}
 
 	private string BuildColoredText() {
@@ -266,9 +306,11 @@ public class TextController : MonoBehaviour {
 	}
 
 	private void TVTurnOn() {
-		if (currentStageIndex == 2 && !pressedTVTurnOn) {
-			pressedTVTurnOn = true;
-			TVTurnOnText.SetActive(false);
+		if (currentStageIndex == 2 && !IsTVTurnOn) {
+			IsTVTurnOn = true;
+			if (TVTurnOnText != null) {
+				TVTurnOnText.SetActive(true);
+			}
 		}
 		RefreshText();
 	}
