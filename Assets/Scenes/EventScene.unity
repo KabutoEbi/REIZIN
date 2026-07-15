@@ -4076,6 +4076,7 @@ MonoBehaviour:
   tutorialText: {fileID: 908540943}
   tutorial1Text: {fileID: 71630062}
   tutorial2Text: {fileID: 1279652169}
+  TVTurnOnText: {fileID: 1045605489}
   stageHideDelay: 2
 --- !u!1001 &1729404822
 PrefabInstance:
@@ -4161,7 +4162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1795337957
 Transform:
   m_ObjectHideFlags: 0
