@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 150}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 1
-  controlID: 32841
+  controlID: 4799
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 150}
   m_MaxSize: {x: 32384, y: 24288}
   vertical: 0
-  controlID: 32842
+  controlID: 4800
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 150}
   m_MaxSize: {x: 8096, y: 24288}
   vertical: 1
-  controlID: 32735
+  controlID: 4657
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -788,9 +788,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.966941, y: -45.006462, z: -34.761826}
+    m_Target: {x: -1.9613141, y: 0.10542594, z: 6.2224884}
     speed: 2
-    m_Value: {x: 6.966941, y: -45.006462, z: -34.761826}
+    m_Value: {x: -1.9613141, y: 0.10542594, z: 6.2224884}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -836,17 +836,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.045361698, y: -0.9215764, z: 0.36851358, w: -0.11342616}
+    m_Target: {x: -0.001995904, y: 0.9802524, z: -0.19758222, w: -0.009929252}
     speed: 2
-    m_Value: {x: 0.045361698, y: 0.9215764, z: -0.36851358, w: 0.11342616}
+    m_Value: {x: -0.001995904, y: 0.9802523, z: -0.19758222, w: -0.009929252}
   m_Size:
-    m_Target: 38.661892
+    m_Target: 5.288437
     speed: 2
-    m_Value: 38.661892
+    m_Value: 5.288437
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 0.001
     m_SpeedNormalized: 0
@@ -1008,9 +1008,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6ee30000
-      m_LastClickedID: 58222
-      m_ExpandedIDs: c83fffff0244ffff2efbffff065e0000fa5e0000fee000005ae20000b6e2000002e3000066e30000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: e2f0ffff2efbffff90640000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1079,7 +1079,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1087,16 +1087,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\itsuk\Documents\Unity\REIZIN
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 06640000
-    m_LastClickedID: 25606
-    m_ExpandedIDs: 00000000a4630000a6630000a8630000aa630000ac630000ae630000b0630000b2630000b4630000b86300000e64000000ca9a3b
+    m_SelectedIDs: 18640000
+    m_LastClickedID: 25624
+    m_ExpandedIDs: 00000000b6630000b8630000ba630000bc630000be630000c0630000c2630000c4630000c6630000c8630000ca63000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1124,7 +1124,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a4630000a6630000a8630000aa630000ac630000ae630000b0630000b2630000b4630000b86300000e64000000ca9a3b
+    m_ExpandedIDs: 00000000b6630000b8630000ba630000bc630000be630000c0630000c2630000c4630000c6630000c8630000ca63000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000c06000000000000028770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

@@ -4084,11 +4084,14 @@ MonoBehaviour:
   TVTurnOnText: {fileID: 1045605489}
   stageHideDelay: 2
   RemotoController: {fileID: 1185067951}
+  ignoredInteractionColliders:
+  - {fileID: 650286036}
   plaercamera: {fileID: 963194227}
-  interactionDistance: 3
+  interactionDistance: 5
   interactionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
+  isTV: 0
 --- !u!1001 &1729404822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4696,6 +4699,7 @@ MonoBehaviour:
   cameraHeight: 1
   minPitch: -80
   maxPitch: 80
+  crosshairSize: 6
 --- !u!143 &1988716048
 CharacterController:
   m_ObjectHideFlags: 0

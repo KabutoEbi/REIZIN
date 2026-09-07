@@ -18,6 +18,7 @@ public class TextController : MonoBehaviour {
 	[SerializeField] private Camera plaercamera;
 	[SerializeField] private float interactionDistance = 3f;
 	[SerializeField] private LayerMask interactionLayerMask = ~0;
+	[SerializeField] private Collider[] ignoredInteractionColliders = new Collider[0];
 
 	private TMP_Text[] tutorialStages;
 	private StageRequirement[] stageRequirements;
@@ -27,7 +28,9 @@ public class TextController : MonoBehaviour {
 	private bool pressedS;
 	private bool pressedD;
 	private bool pressedLeftClick;
-	private bool IsTVTurnOn;
+	public bool isTV;
+	private bool lastLoggedIsTV;
+	private bool hasLoggedIsTV;
 	private bool transitionScheduled;
 	private string originalText;
 
@@ -125,10 +128,6 @@ public class TextController : MonoBehaviour {
 			else if (stageRequirements[currentStageIndex] == StageRequirement.TVTurnOn) {
 				bool lookingAtRemoto = IsLookingAtRemotoController();
 
-				if (TVTurnOnText != null && TVTurnOnText.activeSelf != lookingAtRemoto) {
-					TVTurnOnText.SetActive(lookingAtRemoto);
-				}
-
 				if (lookingAtRemoto && Input.GetKeyDown(KeyCode.E)) {
 					TVTurnOn();
 				}
@@ -137,6 +136,14 @@ public class TextController : MonoBehaviour {
 
 		if (changed) {
 			RefreshText();
+		}
+	}
+
+	private void LateUpdate() {
+		if (!hasLoggedIsTV || lastLoggedIsTV != isTV) {
+			Debug.Log(isTV ? "isTV: ON (true)" : "isTV: OFF (false)", this);
+			lastLoggedIsTV = isTV;
+			hasLoggedIsTV = true;
 		}
 	}
 
@@ -150,12 +157,23 @@ public class TextController : MonoBehaviour {
 			return false;
 		}
 
-		Ray ray = new Ray(cam.transform.position, cam.transform.forward);
-		if (Physics.Raycast(ray, out RaycastHit hit, interactionDistance, interactionLayerMask)) {
-			return hit.transform == RemotoController.transform || hit.transform.IsChildOf(RemotoController.transform);
+		Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+		RaycastHit[] hits = Physics.RaycastAll(ray, interactionDistance, interactionLayerMask);
+		Collider closestCollider = null;
+		float closestDistance = float.PositiveInfinity;
+		foreach (RaycastHit hit in hits) {
+			// Movement barriers can surround an otherwise visible remote.
+			if (ignoredInteractionColliders != null && System.Array.IndexOf(ignoredInteractionColliders, hit.collider) >= 0) {
+				continue;
+			}
+			if (hit.distance < closestDistance) {
+				closestDistance = hit.distance;
+				closestCollider = hit.collider;
+			}
 		}
 
-		return false;
+		return closestCollider != null &&
+			(closestCollider.transform == RemotoController.transform || closestCollider.transform.IsChildOf(RemotoController.transform));
 	}
 
 	private TMP_Text CreateStageClone(string stageName) {
@@ -185,7 +203,7 @@ public class TextController : MonoBehaviour {
 		tutorialText = tutorialStages[currentStageIndex];
 
 		if (TVTurnOnText != null) {
-			TVTurnOnText.SetActive(false);
+			TVTurnOnText.SetActive(stageRequirements[currentStageIndex] == StageRequirement.TVTurnOn);
 		}
 
 		if (tutorialText == null) {
@@ -254,7 +272,7 @@ public class TextController : MonoBehaviour {
 		}
 
 		if (stageRequirements[currentStageIndex] == StageRequirement.TVTurnOn) {
-			return IsTVTurnOn;
+			return isTV;
 		}
 
 		return pressedW && pressedA && pressedS && pressedD;
@@ -272,6 +290,10 @@ public class TextController : MonoBehaviour {
 			currentText.enabled = false;
 		}
 
+		if (TVTurnOnText != null) {
+			TVTurnOnText.SetActive(false);
+		}
+
 		int nextStageIndex = currentStageIndex + 1;
 		if (nextStageIndex < tutorialStages.Length && tutorialStages[nextStageIndex] != null) {
 			ActivateStage(nextStageIndex);
@@ -284,7 +306,7 @@ public class TextController : MonoBehaviour {
 		pressedS = false;
 		pressedD = false;
 		pressedLeftClick = false;
-		IsTVTurnOn = false;
+		isTV = false;
 	}
 
 	private string BuildColoredText() {
@@ -306,8 +328,8 @@ public class TextController : MonoBehaviour {
 	}
 
 	private void TVTurnOn() {
-		if (currentStageIndex == 2 && !IsTVTurnOn) {
-			IsTVTurnOn = true;
+		if (currentStageIndex == 2 && !isTV) {
+			isTV = true;
 			if (TVTurnOnText != null) {
 				TVTurnOnText.SetActive(true);
 			}
